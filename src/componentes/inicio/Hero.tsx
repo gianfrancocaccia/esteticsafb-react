@@ -37,19 +37,20 @@ function Hero() {
 
     return () => clearInterval(intervalo);
 
-  }, []);
+  }, [videos.length]);
 
   return (
 
     <section className="hero">
 
       <video
-
         key={videoActual}
         autoPlay
         muted
         loop
         playsInline
+        preload="auto"
+        webkit-playsinline="true"
         className="video-hero"
       >
 
