@@ -9,7 +9,8 @@ function Hero() {
         muted
         loop
         playsInline
-        preload="auto"
+        webkit-playsinline="true"
+        preload="metadata"
         className="video-hero"
       >
 
