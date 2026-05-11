@@ -22,7 +22,7 @@ function Hero() {
         preload="metadata"
         className="video-hero"
       >
-        <source src="/videos/videoParcial.mp4" type="video/mp4" />
+        <source src="/videos/0511 (3).mp4" type="video/mp4" />
       </video>
 
       <div className="overlay-hero">
