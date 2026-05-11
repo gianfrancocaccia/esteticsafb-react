@@ -25,7 +25,7 @@ function Hero() {
         <source src="/videos/0511-3.mp4" type="video/mp4" />
       </video>
 
-      <div className="overlay">
+      <div className="overlay-s">
         <h1>Medicina Estética</h1>
         <p>Belleza facial, odontología y cirugía plástica</p>
       </div>
