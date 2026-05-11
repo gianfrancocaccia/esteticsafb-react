@@ -22,19 +22,7 @@ function Hero() {
     useState<number>(0);
 
   const videoRef =
-    useRef<HTMLVideoElement | null>(null);
-
-  useEffect(() => {
-
-    const video = videoRef.current;
-
-    if (video) {
-
-      video.play().catch(() => {});
-
-    }
-
-  }, [videoActual]);
+    useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
 
@@ -54,27 +42,33 @@ function Hero() {
 
   }, [videos.length]);
 
+  useEffect(() => {
+
+    if (videoRef.current) {
+
+      videoRef.current.src =
+        videos[videoActual];
+
+      videoRef.current.play()
+        .catch(() => {});
+
+    }
+
+  }, [videoActual]);
+
   return (
 
     <section className="hero">
 
       <video
         ref={videoRef}
-        key={videoActual}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         className="video-hero"
-      >
-
-        <source
-          src={videos[videoActual]}
-          type="video/mp4"
-        />
-
-      </video>
+      />
 
       <div className="overlay-hero">
 
