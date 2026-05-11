@@ -27,6 +27,13 @@
   letter-spacing: 2px;
 }
 
+.logo-img{
+  width: 170px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -95,6 +102,10 @@
     width: 120px;
 
     flex-shrink: 0;
+  }
+
+    .logo-img{
+    width: 120px;
   }
 
   .navbar {
