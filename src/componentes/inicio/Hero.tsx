@@ -1,74 +1,24 @@
-import { useEffect, useRef, useState } from "react";
-
 function Hero() {
-
-  const videos = [
-
-    "/videos/videoUno.MP4",
-
-    "/videos/videoDos.MP4",
-
-    "/videos/videoTres.MP4",
-
-    "/videos/videoCuatro.mp4",
-
-    "/videos/videoSeis.mp4",
-
-    "/videos/videoSiete.mp4"
-
-  ];
-
-  const [videoActual, setVideoActual] =
-    useState<number>(0);
-
-  const videoRef =
-    useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-
-    const intervalo = setInterval(() => {
-
-      setVideoActual((prev) =>
-
-        prev === videos.length - 1
-          ? 0
-          : prev + 1
-
-      );
-
-    }, 6000);
-
-    return () => clearInterval(intervalo);
-
-  }, [videos.length]);
-
-  useEffect(() => {
-
-    if (videoRef.current) {
-
-      videoRef.current.src =
-        videos[videoActual];
-
-      videoRef.current.play()
-        .catch(() => {});
-
-    }
-
-  }, [videoActual]);
 
   return (
 
     <section className="hero">
 
       <video
-        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
         className="video-hero"
-      />
+      >
+
+        <source
+          src="/videos/videoParcial.mp4"
+          type="video/mp4"
+        />
+
+      </video>
 
       <div className="overlay-hero">
 
