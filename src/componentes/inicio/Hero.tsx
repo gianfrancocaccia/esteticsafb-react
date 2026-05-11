@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import{ useEffect, useRef } from "react";
 
 function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -22,10 +22,10 @@ function Hero() {
         preload="auto"
         className="video-hero"
       >
-        <source src="/videos/videoParcial.mp4" type="video/mp4" />
+        <source src="/videos/0511-3.mp4" type="video/mp4" />
       </video>
 
-      <div className="overlay-hero">
+      <div className="overlay">
         <h1>Medicina Estética</h1>
         <p>Belleza facial, odontología y cirugía plástica</p>
       </div>
