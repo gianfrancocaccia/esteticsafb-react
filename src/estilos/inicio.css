@@ -14,6 +14,8 @@
   object-fit: cover;
 }
 
+
+
 /* capa oscura encima del video */
 
 .hero::before {
@@ -235,6 +237,12 @@ font-weight:lighter;
 
 @media (max-width: 768px) {
 
+  .video-hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* llena el contenedor */
+  pointer-events: none; /* evita que se pueda clickear */
+}
   .hero {
     height: 75vh;
   }

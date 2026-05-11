@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 function Hero() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -6,7 +6,7 @@ function Hero() {
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play().catch(err => {
-        console.log("Autoplay bloqueado por el navegador:", err);
+        console.log("Autoplay bloqueado:", err);
       });
     }
   }, []);
@@ -19,10 +19,10 @@ function Hero() {
         muted
         loop
         playsInline
-        preload="metadata"
+        preload="auto"
         className="video-hero"
       >
-        <source src="/videos/0511 (3).mp4" type="video/mp4" />
+        <source src="/videos/videoParcial.mp4" type="video/mp4" />
       </video>
 
       <div className="overlay-hero">
@@ -34,4 +34,5 @@ function Hero() {
 }
 
 export default Hero;
+
 
