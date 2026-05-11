@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function Hero() {
 
@@ -20,6 +20,21 @@ function Hero() {
 
   const [videoActual, setVideoActual] =
     useState<number>(0);
+
+  const videoRef =
+    useRef<HTMLVideoElement | null>(null);
+
+  useEffect(() => {
+
+    const video = videoRef.current;
+
+    if (video) {
+
+      video.play().catch(() => {});
+
+    }
+
+  }, [videoActual]);
 
   useEffect(() => {
 
@@ -44,13 +59,13 @@ function Hero() {
     <section className="hero">
 
       <video
+        ref={videoRef}
         key={videoActual}
         autoPlay
         muted
         loop
         playsInline
         preload="auto"
-        webkit-playsinline="true"
         className="video-hero"
       >
 
