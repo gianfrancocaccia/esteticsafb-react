@@ -8,11 +8,11 @@ function Header() {
 
       <div className="logo">
 
-       <img
-  src="/img/logo2.png"
-  alt="logoclinica"
-  className="logo-img"
-/>
+        <img
+          src="/img/logo2.png"
+          alt="logoclinica"
+          className="logo-img"
+        />
 
       </div>
 
