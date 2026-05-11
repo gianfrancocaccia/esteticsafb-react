@@ -1,0 +1,108 @@
+import { Link } from "react-router-dom";
+
+function ServiciosInicio() {
+
+  return (
+
+    <section className="servicios-inicio">
+
+      <h2>
+        Nuestros Servicios
+      </h2>
+
+      <div className="grid-servicios">
+
+        {/* CIRUGÍA */}
+
+        <Link to="/cirugia-plastica">
+
+          <article className="tarjeta-servicio">
+
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="video-servicio"
+            >
+
+              <source
+                src="/videos/videoCinco.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+
+            <h3>
+              Cirugía Plástica
+            </h3>
+
+          </article>
+
+        </Link>
+
+        {/* BELLEZA FACIAL */}
+
+        <Link to="/belleza-facial">
+
+          <article className="tarjeta-servicio">
+
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="video-servicio"
+            >
+
+              <source
+                src="/videos/videoCuatro.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+
+            <h3>
+              Belleza Facial
+            </h3>
+
+          </article>
+
+        </Link>
+
+        {/* ODONTOLOGÍA */}
+
+        <Link to="/odontologia">
+
+          <article className="tarjeta-servicio">
+
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="video-servicio"
+            >
+
+              <source
+                src="/videos/videoSeis.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+
+            <h3>
+              Odontología
+            </h3>
+
+          </article>
+
+        </Link>
+
+      </div>
+
+    </section>
+  );
+}
+
+export default ServiciosInicio;

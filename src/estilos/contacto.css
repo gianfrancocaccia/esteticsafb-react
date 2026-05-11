@@ -1,0 +1,224 @@
+.pagina-contacto {
+
+  width: 100%;
+}
+
+/* HERO */
+
+.hero-contacto {
+
+  height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding: 40px;
+}
+
+.hero-contacto h1 {
+
+  font-size: 72px;
+
+  font-weight: 500;
+
+  margin-bottom: 20px;
+}
+
+.hero-contacto p {
+
+  font-size: 20px;
+
+  color: #666666;
+}
+
+/* INFO */
+
+.info-contacto {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 100px 40px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.info-contacto article {
+
+  border: 1px solid #eeeeee;
+
+  padding: 50px;
+
+  text-align: center;
+}
+
+.info-contacto h3 {
+
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+.info-contacto p {
+
+  color: #666666;
+}
+
+/* SUCURSALES */
+
+.sucursales-contacto {
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+
+  padding: 100px 40px;
+}
+
+.sucursales-contacto h2 {
+
+  text-align: center;
+
+  font-size: 42px;
+
+  margin-bottom: 60px;
+}
+
+.grid-sucursales {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 30px;
+}
+
+.grid-sucursales article {
+
+  border: 1px solid #eeeeee;
+
+  padding: 40px;
+}
+
+.grid-sucursales h3 {
+
+  margin-bottom: 15px;
+
+  font-size: 24px;
+}
+
+.grid-sucursales p {
+
+  color: #666666;
+
+  line-height: 1.7;
+}
+
+/* WHATSAPP */
+
+.whatsapp-contacto {
+
+  padding: 120px 40px;
+
+  text-align: center;
+}
+
+.whatsapp-contacto h2 {
+
+  font-size: 42px;
+
+  margin-bottom: 40px;
+}
+
+.boton-whatsapp-grande {
+
+  width: fit-content;
+
+  margin: 0 auto;
+
+  padding: 20px 50px;
+
+  background: black;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 50px;
+
+  font-size: 18px;
+
+  transition: 0.3s;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+.boton-whatsapp-grande:hover {
+
+  transform: translateY(-4px);
+
+  opacity: 0.9;
+}
+
+/* INSTAGRAM */
+
+.instagram-contacto {
+
+  padding: 100px 40px;
+
+  text-align: center;
+}
+
+.instagram-contacto h2 {
+
+  font-size: 42px;
+
+  margin-bottom: 25px;
+}
+
+.instagram-contacto a {
+
+  font-size: 22px;
+
+  color: black;
+
+  text-decoration: none;
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .hero-contacto h1 {
+    font-size: 42px;
+  }
+
+  .info-contacto {
+
+    grid-template-columns: 1fr;
+
+    padding: 80px 25px;
+  }
+
+  .grid-sucursales {
+
+    grid-template-columns: 1fr;
+  }
+
+}
