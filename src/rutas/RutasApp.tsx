@@ -9,16 +9,24 @@ import Inicio from "../paginas/Inicio";
 import CirugiaPlastica from "../paginas/servicios/CirugiaPlastica";
 import BellezaFacial from "../paginas/servicios/BellezaFacial";
 import Odontologia from "../paginas/servicios/Odontologia";
+
 import Contacto from "../paginas/Contacto";
+
+import Gracias from "../paginas/Gracias";
+
 import ScrollToTop from "../componentes/ScrollToTop";
+
 import NoEncontrado from "../paginas/NoEncontrado";
+
+import WhatsAppFloat from "../componentes/WhatsAppFloat";
 
 function RutasApp() {
 
   return (
+
     <BrowserRouter>
 
-    <ScrollToTop/>
+      <ScrollToTop />
 
       <Routes>
 
@@ -43,15 +51,22 @@ function RutasApp() {
         />
 
         <Route
-  path="/contacto"
-  element={<Contacto />}
-/>
-<Route
-  path="*"
-  element={<NoEncontrado />}
-/>
-      </Routes>
+          path="/contacto"
+          element={<Contacto />}
+        />
 
+        <Route
+          path="/gracias"
+          element={<Gracias />}
+        />
+
+        <Route
+          path="*"
+          element={<NoEncontrado />}
+        />
+
+      </Routes>
+<WhatsAppFloat />
     </BrowserRouter>
   );
 }

@@ -1,62 +1,104 @@
+import { useState } from "react";
 import Header from "../../componentes/layout/Header";
 import Footer from "../../componentes/layout/Footer";
+import "../../estilos/servicioestilo.css/Reservas.css";
 
 function BellezaFacial() {
 
+  const [loadingTratamiento, setLoadingTratamiento] = useState<string | null>(null);
+
+  const precios: Record<string, number> = {
+    "Toxina Botulinica": 60,
+    "Rellenos de Hiluronico": 60,
+    "Faciales y corporales": 50,
+    "Bioestimuladores": 80,
+    "Suero Terapia": 45
+  };
+
+  const comprar = async (tratamiento: string) => {
+
+    setLoadingTratamiento(tratamiento);
+
+    try {
+
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL}/create_preference`,
+        {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+            title: tratamiento,
+            price: precios[tratamiento]
+          })
+        }
+      );
+
+      const data = await res.json();
+
+      await new Promise(r => setTimeout(r, 1000));
+
+      window.location.href = data.init_point;
+
+    } catch (error) {
+
+      console.log(error);
+
+      setLoadingTratamiento(null);
+
+      alert("Error iniciando pago");
+
+    }
+
+  };
+
   return (
     <>
-
       <Header />
 
       <main className="pagina-servicio">
 
         <section className="hero-servicio">
+          <h1>Belleza Facial</h1>
+        </section>
 
-          <h1>
-            Belleza Facial
-          </h1>
+        <section className="tratamientos">
+
+          {Object.keys(precios).map(tratamiento => (
+
+            <article key={tratamiento}>
+
+              <h3>{tratamiento}</h3>
+
+              <p>
+                ${precios[tratamiento].toLocaleString()}
+              </p>
+
+              <button
+                onClick={() => comprar(tratamiento)}
+                className="link-servicio"
+              >
+
+                Reservar consulta ahora
+
+                {loadingTratamiento === tratamiento && (
+                  <span className="linea-carga" />
+                )}
+
+              </button>
+
+            </article>
+
+          ))}
 
         </section>
 
-<section className="tratamientos">
-  <article>
-    <h3>Toxina Botulinica</h3>
-  </article>
-
-  <article>
-    <h3>Rellenos de Hiluronico</h3>
-  </article>
-
-  <article>
-    <h3>Faciales y corporales</h3>
-  </article>
-
-  <article>
-    <h3>Bioestimuladores</h3>
-  </article>
-
-  <article>
-    <h3>Suero Terapia</h3>
-  </article>
-
-</section>
-<div style={{display: "flex", justifyContent:"center"}}>
-  <a
-  href="https://wa.me/5491111111111"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="boton-whatsapp"
->
-
-  Consultar por WhatsApp
-
-</a>
-      
-</div>
       </main>
 
       <Footer />
-
     </>
   );
 }

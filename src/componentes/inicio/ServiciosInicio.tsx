@@ -27,7 +27,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoCinco.mp4"
+                src="/videos/videoUno.mp4"
                 type="video/mp4"
               />
 
@@ -63,7 +63,7 @@ function ServiciosInicio() {
             </video>
 
             <h3>
-              Belleza Facial
+              Medicina Estética
             </h3>
 
           </article>
@@ -85,7 +85,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoSeis.mp4"
+                src="/videos/videoDos.mp4"
                 type="video/mp4"
               />
 

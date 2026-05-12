@@ -10,7 +10,7 @@ function MenuServicios() {
       </Link>
 
       <Link to="/belleza-facial">
-        Belleza Facial
+       Medicina Estética
       </Link>
 
       <Link to="/odontologia">

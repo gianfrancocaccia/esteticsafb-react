@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 html {
@@ -95,4 +95,111 @@ body {
   text-decoration: none;
 
   border-radius: 14px;
+}
+
+.link-servicio {
+
+  position: relative;
+
+  display: inline-block;
+
+  cursor: pointer;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  padding-bottom: 4px;
+
+  transition: opacity 0.3s ease;
+
+}
+
+.link-servicio::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(255,255,255,0.35);
+
+  transition: 0.3s ease;
+
+}
+
+.link-servicio:hover {
+
+  opacity: 0.7;
+
+}
+
+.link-servicio:hover::after {
+
+  height: 2px;
+
+  background: white;
+
+}
+
+.link-servicio:active {
+
+  transform: scale(0.98);
+
+}
+
+
+.whatsapp-float {
+
+  position: fixed;
+
+  right: 20px;
+
+  bottom: 20px;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  transition: 0.3s ease;
+
+}
+
+.whatsapp-float img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: contain;
+
+}
+
+.whatsapp-float:hover {
+
+  transform: scale(1.08);
+
+}
+
+.whatsapp-float:active {
+
+  transform: scale(0.95);
+
 }
