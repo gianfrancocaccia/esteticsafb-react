@@ -14,7 +14,7 @@ function Horarios() {
         </p>
 
         <p>
-          10:00 - 20:00
+          09:00 - 20:00
         </p>
 
       </div>
@@ -22,14 +22,16 @@ function Horarios() {
       <div className="caja-horarios">
 
         <p>
-          Sábados
+          Sabados
         </p>
 
         <p>
-          10:00 - 18:00
+          09:00 - 20:00
         </p>
 
       </div>
+
+
 
     </section>
   );

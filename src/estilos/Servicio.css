@@ -1,0 +1,399 @@
+.pagina-servicios {
+
+  min-height:
+  120vh;
+
+  display:
+  flex;
+
+  justify-content:
+  center;
+
+  align-items:
+  center;
+
+  padding:
+  120px 20px;
+
+}
+
+.contenido-servicios {
+
+  width:
+  100%;
+
+  text-align:
+  center;
+
+}
+
+.links-servicios {
+
+  display:
+  flex;
+
+  flex-wrap:
+  wrap;
+
+  justify-content:
+  center;
+
+  align-items:
+  center;
+
+  gap:
+  80px;
+
+  margin-bottom:
+  150px;
+
+}
+
+.links-servicios a {
+
+  text-decoration:
+  none;
+
+  color:
+  black;
+
+  font-size:
+  38px;
+
+  font-weight:
+  300;
+
+  letter-spacing:
+  1px;
+
+  transition:
+  0.3s ease;
+
+  position:
+  relative;
+
+  padding-bottom:
+  5px;
+
+  white-space:
+  nowrap;
+
+}
+
+/* línea animada */
+
+.links-servicios a::after {
+
+  content:
+  "";
+
+  position:
+  absolute;
+
+  left:
+  0;
+
+  bottom:
+  0;
+
+  width:
+  0;
+
+  height:
+  1px;
+
+  background:
+  black;
+
+  transition:
+  width 0.4s ease;
+
+}
+
+.links-servicios a:hover::after {
+
+  width:
+  100%;
+
+}
+
+.links-servicios a:hover {
+
+  opacity:
+  0.5;
+
+}
+
+/* ========================= */
+/* ELEGIR SUCURSAL */
+/* ========================= */
+
+.pagina-servicio {
+
+  min-height:
+  120vh;
+
+  display:
+  flex;
+
+  flex-direction:
+  column;
+
+  align-items:
+  center;
+
+  justify-content:
+  center;
+
+  text-align:
+  center;
+
+  padding:
+  140px 20px 220px;
+
+}
+
+.pagina-servicio h2 {
+
+  font-size:
+  42px;
+
+  font-weight:
+  300;
+
+  letter-spacing:
+  -1px;
+
+  margin-bottom:
+  45px;
+
+}
+
+.lista-sucursales {
+
+  display:
+  flex;
+
+  flex-direction:
+  column;
+
+  align-items:
+  center;
+
+  gap:
+  18px;
+
+  width:
+  100%;
+
+  max-width:
+  420px;
+
+}
+
+.boton-sucursal {
+
+  width:
+  100%;
+
+  display:
+  flex;
+
+  justify-content:
+  center;
+
+  align-items:
+  center;
+
+  text-align:
+  center;
+
+  padding:
+  16px 22px;
+
+  font-size:
+  20px;
+
+  font-weight:
+  300;
+
+  border:
+  1px solid #111;
+
+  border-radius:
+  999px;
+
+  background:
+  transparent;
+
+  cursor:
+  pointer;
+
+  transition:
+  all 0.3s ease;
+
+  letter-spacing:
+  0.3px;
+
+}
+
+.boton-sucursal input[type="radio"] {
+
+  display:
+  none;
+
+}
+
+.boton-sucursal:hover {
+
+  background:
+  #111;
+
+  color:
+  white;
+
+  transform:
+  scale(1.02);
+
+}
+
+.boton-sucursal.activo {
+
+  background:
+  #111;
+
+  color:
+  white;
+
+  border:
+  1px solid #111;
+
+}
+
+.boton-confirmar {
+
+  margin-top:
+  45px;
+
+  padding:
+  14px 38px;
+
+  border:
+  none;
+
+  border-radius:
+  999px;
+
+  background:
+  #111;
+
+  color:
+  white;
+
+  font-size:
+  18px;
+
+  font-weight:
+  300;
+
+  letter-spacing:
+  0.5px;
+
+  cursor:
+  pointer;
+
+  transition:
+  0.3s ease;
+
+}
+
+.boton-confirmar:hover {
+
+  opacity:
+  0.85;
+
+  transform:
+  translateY(-2px);
+
+}
+
+/* ========================= */
+/* MOBILE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  .links-servicios {
+
+    flex-direction:
+    column;
+
+    gap:
+    35px;
+
+    margin-bottom:
+    100px;
+
+  }
+
+  .links-servicios a {
+
+    font-size:
+    28px;
+
+    white-space:
+    normal;
+
+  }
+
+  .pagina-servicio {
+
+    padding:
+    120px 20px 180px;
+
+  }
+
+  .pagina-servicio h2 {
+
+    font-size:
+    32px;
+
+    line-height:
+    1.2;
+
+    margin-bottom:
+    35px;
+
+  }
+
+  .lista-sucursales {
+
+    max-width:
+    100%;
+
+    gap:
+    14px;
+
+  }
+
+  .boton-sucursal {
+
+    font-size:
+    17px;
+
+    padding:
+    14px 18px;
+
+  }
+
+  .boton-confirmar {
+
+    font-size:
+    16px;
+
+    padding:
+    14px 30px;
+
+  }
+
+}

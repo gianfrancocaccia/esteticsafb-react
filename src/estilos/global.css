@@ -203,3 +203,115 @@ body {
   transform: scale(0.95);
 
 }
+
+.boton-turno {
+
+  display:
+  flex;
+
+  justify-content:
+  center;
+
+  align-items:
+  center;
+
+  width:
+  fit-content;
+
+  margin:
+  70px auto 0;
+
+  text-decoration:
+  none;
+
+  color:
+  black;
+
+  font-size:
+  42px;
+
+  font-weight:
+  300;
+
+  letter-spacing:
+  1px;
+
+  position:
+  relative;
+
+  transition:
+  0.3s ease;
+
+  padding-bottom:
+  6px;
+
+}
+
+/* línea elegante */
+
+.boton-turno::after {
+
+  content:
+  "";
+
+  position:
+  absolute;
+
+  left:
+  0;
+
+  bottom:
+  0;
+
+  width:
+  0;
+
+  height:
+  1px;
+
+  background:
+  black;
+
+  transition:
+  width 0.4s ease;
+
+}
+
+.boton-turno:hover::after {
+
+  width:
+  100%;
+
+}
+
+.boton-turno:hover {
+
+  opacity:
+  0.6;
+
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+  .boton-turno {
+
+    font-size:
+    28px;
+
+    margin-top:
+    50px;
+
+    text-align:
+    center;
+
+    line-height:
+    1.2;
+
+    padding:
+    0 10px;
+
+  }
+
+}

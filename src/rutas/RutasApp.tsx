@@ -20,6 +20,10 @@ import NoEncontrado from "../paginas/NoEncontrado";
 
 import WhatsAppFloat from "../componentes/WhatsAppFloat";
 
+import Servicios from "../../src/paginas/Servicios"
+
+import ElegirSucursal from "../paginas/ElegirSucursal";
+
 function RutasApp() {
 
   return (
@@ -50,6 +54,8 @@ function RutasApp() {
           element={<Odontologia />}
         />
 
+
+
         <Route
           path="/contacto"
           element={<Contacto />}
@@ -61,9 +67,18 @@ function RutasApp() {
         />
 
         <Route
+path="/elegir-sucursal"
+element={<ElegirSucursal/>} />
+
+
+        <Route
           path="*"
           element={<NoEncontrado />}
         />
+<Route
+  path="/servicios"
+  element={<Servicios />}
+/>
 
       </Routes>
 <WhatsAppFloat />

@@ -2,32 +2,23 @@ import { useState } from "react";
 
 import MenuServicios from "./MenuServicios";
 
+
+import { Link } from "react-router-dom";
 function Navbar() {
-
-  const [abierto, setAbierto] =
-    useState<boolean>(false);
-
   return (
     <nav className="navbar">
 
-      <a href="/">
+      <Link to="/">
         Inicio
-      </a>
+      </Link>
 
-      <button
-        onClick={() => setAbierto(!abierto)}
-      >
-        Servicios 
-      </button>
+      <Link to="/servicios">
+        Servicios
+      </Link>
 
-      <a href="contacto">
+      <Link to="/contacto">
         Contacto
-      </a>
-
-      {
-        abierto &&
-        <MenuServicios />
-      }
+      </Link>
 
     </nav>
   );

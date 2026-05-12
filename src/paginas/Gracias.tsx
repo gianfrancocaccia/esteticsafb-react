@@ -4,38 +4,37 @@ import Footer from "../componentes/layout/Footer";
 
 function Gracias() {
 
-  const location = useLocation();
-  const params = new URLSearchParams(location.search);
-  const tratamiento = params.get("tratamiento") || "tu tratamiento";
+  const { search } = useLocation();
+  const params = new URLSearchParams(search);
+  const tratamiento = params.get("tratamiento");
+  const sucursal = params.get("sucursal");
 
   return (
     <>
       <Header />
 
-      <main
-  style={{
-    minHeight: "140vh",       // ocupa casi toda la altura de la pantalla
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center", // centra verticalmente
-    alignItems: "center",
-    gap: "20px",
-    textAlign: "center",
-    padding: "20px"
-  }}
->
-  <h2>Pago confirmado</h2>
-  <p>Contactanos para coordinar tu turno</p>
+      <main style={{
+        minHeight: "70vh",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
+        textAlign: "center",
+        padding: "20px"
+      }}>
+        <h2>Pago confirmado</h2>
+        <p>Contactanos para coordinar tu turno</p>
 
-  <a
-    href={`https://wa.me/5491158837864?text=Hola,%20realicé%20el%20pago%20de%20la%20seña%20para%20${encodeURIComponent(tratamiento)}.`}
-    target="_blank"
-    rel="noopener noreferrer"
-    className="boton-whatsapp"
-  >
-    Ir a WhatsApp
-  </a>
-</main>
+       <a
+  href={`https://wa.me/5491158837864?text=Hola,%20saqué%20turno%20en%20${encodeURIComponent(sucursal || "")}%20para%20${encodeURIComponent(tratamiento || "")}.`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="boton-whatsapp"
+>
+  Ir a WhatsApp
+</a>
+      </main>
 
       <Footer />
     </>

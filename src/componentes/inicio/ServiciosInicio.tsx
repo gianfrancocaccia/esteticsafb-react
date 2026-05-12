@@ -56,7 +56,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoCuatro.mp4"
+                src="/videos/videoOcho.mp4"
                 type="video/mp4"
               />
 
@@ -98,8 +98,16 @@ function ServiciosInicio() {
           </article>
 
         </Link>
-
+ 
+ 
       </div>
+
+      <Link
+  to="/servicios"
+  className="boton-turno"
+>
+  Reserva tu turno
+</Link>
 
     </section>
   );

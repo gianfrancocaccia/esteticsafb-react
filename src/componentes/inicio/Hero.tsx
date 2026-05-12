@@ -23,7 +23,7 @@ function Hero() {
         poster="/images/hero-poster.jpg"   // 👈 imagen estática
         className="video-hero"
       >
-        <source src="/videos/videoUno.mp4" type="video/mp4" />
+        <source src="/videos/videoCuatro.mp4" type="video/mp4" />
       </video>
 
       <div className="overlay-hero">
