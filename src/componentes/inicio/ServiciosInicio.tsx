@@ -25,7 +25,7 @@ function ServiciosInicio() {
               playsInline
               className="video-servicio"
                preload="auto"
-               webkit-playsinline="true"
+              
             >
 
               <source
@@ -56,7 +56,7 @@ function ServiciosInicio() {
               playsInline
               className="video-servicio"
                preload="auto"
-               webkit-playsinline="true"
+           
             >
 
               <source
@@ -87,7 +87,7 @@ function ServiciosInicio() {
               playsInline
               className="video-servicio"
                preload="auto"
-               webkit-playsinline="true"
+          
             >
 
               <source
