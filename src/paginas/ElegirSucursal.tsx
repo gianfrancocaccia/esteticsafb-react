@@ -54,7 +54,8 @@ localStorage.setItem(
   "sucursal",
   sucursalSeleccionada
 );
-
+console.log(tratamiento);
+console.log(sucursalSeleccionada);
       window.location.href = data.init_point;
     } catch (error) {
       console.log(error);
