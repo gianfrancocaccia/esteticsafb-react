@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import VideoDos from "../../../public/videos/videoDos.mp4"
+
 
 function ServiciosInicio() {
 
@@ -93,7 +93,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src={VideoDos}
+                src="/video/videoDos.mp4"
                 type="video/mp4"
               />
 
