@@ -21,21 +21,19 @@ function ServiciosInicio() {
           <article className="tarjeta-servicio">
 
             <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="video-servicio"
-               preload="auto"
+             
+  src="/videos/videoUno.mp4"
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="auto"
+  className="video-servicio"
+/>
               
-            >
+            
 
-              <source
-                src="/videos/videoUno.mp4"
-                type="video/mp4"
-              />
-
-            </video>
+          
 
             <h3>
               Cirugía Plástica
