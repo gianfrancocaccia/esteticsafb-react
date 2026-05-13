@@ -1,389 +1,303 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #111111;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-
-img {
+.hero {
   width: 100%;
-  display: block;
+  height: 100vh;
+
+  overflow: hidden;
+
+  position: relative;
 }
 
-main {
-  padding-top: 90px;
-}
+.video-hero {
 
-section {
   width: 100%;
+  height: 100%;
+
+ pointer-events: none; /* evita interacción y que aparezca el botón play */
+
+
+  object-fit: cover;
 }
 
-h1, h2, h3 {
 
-  letter-spacing: -1px;
+
+
+/* capa oscura encima del video */
+
+.hero::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.35);
+
+  z-index: 1;
 }
 
-p {
+/* texto encima */
 
-  line-height: 1.8;
-}
+.overlay {
+  position: absolute;
 
-html,
-body {
+  top: 50%;
+  left: 50%;
 
-  overflow-x: hidden;
-}
+  transform: translate(-50%, -50%);
 
-.no-encontrado {
+  z-index: 2;
 
-  min-height: 100vh;
-
-  display: flex;
-
-  flex-direction: column;
-
-  justify-content: center;
-
-  align-items: center;
-
-  gap: 20px;
-
-  background: white;
-}
-
-.no-encontrado h1 {
-
-  font-size: 120px;
-
-  font-weight: 600;
-}
-
-.no-encontrado p {
-
-  font-size: 24px;
-}
-
-.no-encontrado a {
-
-  padding: 14px 30px;
-
-  background: black;
+  text-align: center;
 
   color: white;
 
-  text-decoration: none;
-
-  border-radius: 14px;
+  width: 90%;
 }
 
-.link-servicio {
-
-  position: relative;
-
-  display: inline-block;
-
-  cursor: pointer;
-
+.overlay h1 {
+  font-size: 72px;
   font-weight: 500;
 
-  letter-spacing: 0.3px;
+  letter-spacing: 2px;
 
-  padding-bottom: 4px;
+  margin-bottom: 20px;
+}
 
-  transition: opacity 0.3s ease;
+.overlay p {
+  font-size: 22px;
+
+  font-weight: 300;
+
+  letter-spacing: 1px;
+}
+
+/* SOBRE NOSOTROS */
+
+.sobre-nosotros {
+  padding: 120px 80px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  gap: 30px;
+}
+
+.sobre-nosotros h2 {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.sobre-nosotros p {
+  max-width: 700px;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  color: #555555;
+}
+
+/* SERVICIOS */
+
+
+.servicios-inicio {
+  padding: 190px 40px;
 
 }
 
-.link-servicio::after {
+.servicios-inicio h2 {
+  font-size: 42px;
+  font-weight: 500;
+
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+}
+/*.tarjeta-servicio::before {
 
   content: "";
 
   position: absolute;
 
-  left: 0;
+  inset: 0;
 
-  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.1)
+  );
+
+  z-index: 1;
+}*/
+
+.tarjeta-servicio {
+  margin: 10px;
+  overflow: hidden;
+  padding-bottom: 30px;
+padding-left: 30px;
+padding-right: 30px;
+padding-top: 80px;
+  background: rgba(239, 238, 238, 0.457);
+  transition: 0.3s;
+border-radius: 30px;
+}
+
+.tarjeta-servicio:hover {
+  transform: translateY(-5px);
+}
+
+
+.tarjeta-servicio video {
 
   width: 100%;
 
-  height: 1px;
-
-  background: rgba(255,255,255,0.35);
-
-  transition: 0.3s ease;
-
-}
-
-.link-servicio:hover {
-
-  opacity: 0.7;
-
-}
-
-.link-servicio:hover::after {
-
-  height: 2px;
-
-  background: white;
-
-}
-
-.link-servicio:active {
-
-  transform: scale(0.98);
-
-}
-
-
-.whatsapp-float {
-
-  position: fixed;
-
-  right: 20px;
-
-  bottom: 20px;
-
-  width: 60px;
-
-  height: 60px;
-
-  border-radius: 50%;
-
-  z-index: 9999;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  transition: 0.3s ease;
-
-}
-
-.whatsapp-float img {
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: contain;
-
-}
-
-.whatsapp-float:hover {
-
-  transform: scale(1.08);
-
-}
-
-.whatsapp-float:active {
-
-  transform: scale(0.95);
-
-}
-
-.boton-turno {
-
-  display:
-  flex;
-
-  justify-content:
-  center;
-
-  align-items:
-  center;
-
-  width:
-  fit-content;
-
-  margin:
-  70px auto 0;
-
-  text-decoration:
-  none;
-
-  color:
-  black;
-
-  font-size:
-  42px;
-
-  font-weight:
-  300;
-
-  letter-spacing:
-  1px;
-
-  position:
-  relative;
-
-  transition:
-  0.3s ease;
-
-  padding-bottom:
-  6px;
-
-}
-
-/* línea elegante */
-
-.boton-turno::after {
-
-  content:
-  "";
-
-  position:
-  absolute;
-
-  left:
-  0;
-
-  bottom:
-  0;
-
-  width:
-  0;
-
-  height:
-  1px;
-
-  background:
-  black;
-
-  transition:
-  width 0.4s ease;
-
-}
-
-.boton-turno:hover::after {
-
-  width:
-  100%;
-
-}
-
-.boton-turno:hover {
-
-  opacity:
-  0.6;
-
-}
-
-.video-servicio {
-
-  width: 100%;
-
-  height: 100%;
+  height: 350px;
 
   object-fit: cover;
 
+  display: block;
 }
 
-/* MOBILE */
+
+.tarjeta-servicio h3 {
+  margin-top: 60px;
+color: rgb(0, 0, 0);
+  font-size: 24px;
+  font-weight: 400;
+font-weight:lighter;
+  text-align: center;
+}
+
+/* HORARIOS */
+
+.horarios {
+  padding: 120px 80px;
+
+  background: #f3f2f2;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.horarios h2 {
+  font-size: 42px;
+
+  margin-bottom: 50px;
+}
+
+.caja-horarios {
+  width: 400px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: 20px 0;
+
+  border-bottom: 1px solid #dddddd;
+}
+
+/* LOCALES */
+
+.locales {
+  padding: 120px 80px;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 40px;
+}
+
+.locales div {
+  border: 1px solid #eeeeee;
+
+  padding: 40px;
+}
+
+.locales h3 {
+  font-size: 28px;
+
+  margin-bottom: 20px;
+}
+
+.locales p {
+  margin-bottom: 10px;
+
+  color: #555555;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
 
-  .boton-turno {
-
-    font-size:
-    28px;
-
-    margin-top:
-    50px;
-
-    text-align:
-    center;
-
-    line-height:
-    1.2;
-
-    padding:
-    0 10px;
-
+  .video-hero {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* llena el contenedor */
+  pointer-events: none; /* evita que se pueda clickear */
+}
+  .hero {
+    height: 75vh;
   }
 
-}
+  .overlay h1 {
+    font-size: 38px;
+  }
 
-.precio-servicio {
+  .overlay p {
+    font-size: 16px;
+  }
 
-  font-size: 26px;
+  .sobre-nosotros {
+    padding: 80px 25px;
+  }
 
-  font-weight: 500;
+  .sobre-nosotros h2 {
+    font-size: 32px;
+  }
 
-  margin-bottom: 8px;
+  .sobre-nosotros p {
+    font-size: 16px;
+  }
 
-}
+  .servicios-inicio {
+    padding: 80px 25px;
+  }
 
-.texto-reserva {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
 
-  display: block;
+  .tarjeta-servicio img {
+    height: 320px;
+  }
 
-  font-size: 14px;
+  .horarios {
+    padding: 80px 25px;
+  }
 
-  font-weight: 300;
+  .caja-horarios {
+    width: 100%;
+  }
 
-  opacity: 0.7;
+  .locales {
+    grid-template-columns: 1fr;
 
-  margin-bottom: 22px;
+    padding: 80px 25px;
+  }
 
-  letter-spacing: 0.5px;
+ 
 
-}
-
-.boton-whatsapp {
-
-  margin-top: 90px;
-
-  background: black;
-
-  color: white;
-
-  text-decoration: none;
-
-  padding: 18px 42px;
-
-  border-radius: 12px;
-
-  font-size: 18px;
-
-  font-weight: 300;
-
-  transition: 0.3s ease;
-
-  display: inline-flex;
-
-  justify-content: center;
-
-  align-items: center;
-
-}
-
-.boton-whatsapp:hover {
-
-  opacity: 0.8;
-
-  transform: translateY(-2px);
-
-}
+} 
