@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 
+
+
 function ServiciosInicio() {
 
   return (
 
     <section className="servicios-inicio">
 
-      <h2 className="titulo-servicios">
+      <h2>
         Nuestros Servicios
       </h2>
 
@@ -14,61 +16,66 @@ function ServiciosInicio() {
 
         {/* CIRUGÍA */}
 
-        <Link
-          to="/cirugia-plastica"
-          className="link-tarjeta"
-        >
+        <Link to="/cirugia-plastica">
 
           <article className="tarjeta-servicio">
 
-            <video
-              src="/videos/videoUno.mp4"
+                     <video
               autoPlay
               muted
               loop
               playsInline
-              preload="auto"
               className="video-servicio"
-            />
+               preload="none"
+         
+           
+            >
 
-            <h3 className="titulo-tarjeta">
+              <source
+                src="/video.videoUno.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+              
+            
+
+          
+
+            <h3>
               Cirugía Plástica
             </h3>
-
-            <p className="texto-reserva">
-              Pago correspondiente a reserva/seña
-            </p>
 
           </article>
 
         </Link>
 
-        {/* MEDICINA ESTÉTICA */}
+        {/* BELLEZA FACIAL */}
 
-        <Link
-          to="/belleza-facial"
-          className="link-tarjeta"
-        >
+        <Link to="/belleza-facial">
 
           <article className="tarjeta-servicio">
 
             <video
-              src="/videos/videoOcho.mp4"
               autoPlay
               muted
               loop
               playsInline
-              preload="auto"
               className="video-servicio"
-            />
+               preload="none"
+           
+            >
 
-            <h3 className="titulo-tarjeta">
+              <source
+                src="/videos/videoOcho.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+
+            <h3>
               Medicina Estética
             </h3>
-
-            <p className="texto-reserva">
-              Pago correspondiente a reserva/seña
-            </p>
 
           </article>
 
@@ -76,47 +83,44 @@ function ServiciosInicio() {
 
         {/* ODONTOLOGÍA */}
 
-        <Link
-          to="/odontologia"
-          className="link-tarjeta"
-        >
+        <Link to="/odontologia">
 
           <article className="tarjeta-servicio">
 
             <video
-              src="/videos/videoDos.mp4"
               autoPlay
               muted
               loop
               playsInline
-              preload="auto"
               className="video-servicio"
-            />
+               preload="none"
+           
+            >
 
-            <h3 className="titulo-tarjeta">
+              <source
+                src="/videos/videoDos.mp4"
+                type="video/mp4"
+              />
+
+            </video>
+
+            <h3>
               Odontología
             </h3>
-
-            <p className="texto-reserva">
-              Pago correspondiente a reserva/seña
-            </p>
 
           </article>
 
         </Link>
-
+ 
+ 
       </div>
 
-      <div className="contenedor-boton-turno">
-
-        <Link
-          to="/servicios"
-          className="boton-turno"
-        >
-          Reserva tu turno
-        </Link>
-
-      </div>
+      <Link
+  to="/servicios"
+  className="boton-turno"
+>
+  Reserva tu turno
+</Link>
 
     </section>
   );
