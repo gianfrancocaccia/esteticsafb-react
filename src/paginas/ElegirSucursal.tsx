@@ -45,6 +45,16 @@ function ElegirSucursal() {
       );
       const data = await res.json();
 
+      console.log(
+  "guardando tratamiento:",
+  tratamiento
+);
+
+console.log(
+  "guardando sucursal:",
+  sucursalSeleccionada
+);
+
       localStorage.setItem(
   "tratamiento",
   tratamiento
@@ -56,7 +66,8 @@ localStorage.setItem(
 );
 console.log(tratamiento);
 console.log(sucursalSeleccionada);
-      window.location.href = data.init_point;
+   window.location.href =
+`${data.init_point}?tratamiento=${encodeURIComponent(tratamiento)}&sucursal=${encodeURIComponent(sucursalSeleccionada)}`;
     } catch (error) {
       console.log(error);
       alert("Error iniciando pago");
