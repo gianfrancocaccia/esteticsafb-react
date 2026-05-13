@@ -26,7 +26,8 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
-               preload="auto"
+               preload="none"
+         
            
             >
 
@@ -61,12 +62,12 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
-               preload="auto"
+               preload="none"
            
             >
 
               <source
-                src="/videos/videoTres.mp4"
+                src="/videos/videoOcho.mp4"
                 type="video/mp4"
               />
 
@@ -92,7 +93,7 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
-               preload="auto"
+               preload="none"
            
             >
 
