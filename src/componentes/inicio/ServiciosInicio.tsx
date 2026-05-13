@@ -20,16 +20,22 @@ function ServiciosInicio() {
 
           <article className="tarjeta-servicio">
 
-            <video
-             
-  src="/videos/videoUno.mp4"
-  autoPlay
-  muted
-  loop
-  playsInline
-  preload="auto"
-  className="video-servicio"
-/>
+                     <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="video-servicio"
+               preload="auto"
+           
+            >
+
+              <source
+                src="/videos/videoUno.mp4"
+                type="video/mp4"
+              />
+
+            </video>
               
             
 
@@ -87,11 +93,11 @@ function ServiciosInicio() {
               playsInline
               className="video-servicio"
                preload="auto"
-          
+           
             >
 
               <source
-                src="/video/videoDos.mp4"
+                src="/videos/videoDos.mp4"
                 type="video/mp4"
               />
 
