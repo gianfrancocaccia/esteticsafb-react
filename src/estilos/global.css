@@ -341,3 +341,39 @@ body {
   letter-spacing: 0.5px;
 
 }
+
+.boton-whatsapp {
+
+  margin-top: 90px;
+
+  background: black;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 18px 42px;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+
+  font-weight: 300;
+
+  transition: 0.3s ease;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.boton-whatsapp:hover {
+
+  opacity: 0.8;
+
+  transform: translateY(-2px);
+
+}
