@@ -50,7 +50,7 @@ function Gracias() {
           }}
            className="boton-whatsapp"
         >
-          Enviar comprobante por WhatsApp
+          Enviar WhatsApp
         </a>
 
       </main>

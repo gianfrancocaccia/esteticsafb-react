@@ -27,7 +27,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoUno.mp4"
+                src="C:\Users\Gianfranco\Desktop\esteticafb-react\esteticafb-react\public\videos\videoUno.mp4"
                 type="video/mp4"
               />
 
@@ -85,7 +85,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoDos.mp4"
+                src="C:\Users\Gianfranco\Desktop\esteticafb-react\esteticafb-react\public\videos\videoDos.mp4"
                 type="video/mp4"
               />
 
