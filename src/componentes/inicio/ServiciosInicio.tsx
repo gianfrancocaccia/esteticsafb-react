@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 
+import VideoDos from "../../../public/videos/videoDos.mp4"
+
 function ServiciosInicio() {
 
   return (
@@ -91,7 +93,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoDos.mp4"
+                src={VideoDos}
                 type="video/mp4"
               />
 
