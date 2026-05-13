@@ -1,12 +1,17 @@
-import { useLocation } from "react-router-dom";
+
 import Header from "../componentes/layout/Header";
 
 function Gracias() {
 
-  const { search } = useLocation();
-  const params = new URLSearchParams(search);
-  const tratamiento = params.get("tratamiento");
-  const sucursal = params.get("sucursal");
+const tratamiento =
+  localStorage.getItem(
+    "tratamiento"
+  );
+
+const sucursal =
+  localStorage.getItem(
+    "sucursal"
+  );
 
 
   return (

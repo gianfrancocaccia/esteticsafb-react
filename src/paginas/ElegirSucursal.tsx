@@ -45,6 +45,16 @@ function ElegirSucursal() {
       );
       const data = await res.json();
 
+      localStorage.setItem(
+  "tratamiento",
+  tratamiento
+);
+
+localStorage.setItem(
+  "sucursal",
+  sucursalSeleccionada
+);
+
       window.location.href = data.init_point;
     } catch (error) {
       console.log(error);
