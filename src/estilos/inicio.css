@@ -328,3 +328,129 @@ body {
   }
 
 }
+
+/* LINKS */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* BOTÓN RESERVA */
+
+.boton-turno {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: fit-content;
+
+  margin: 80px auto 0 auto;
+
+  padding: 18px 45px;
+
+  background: black;
+
+  color: white;
+
+  border-radius: 14px;
+
+  font-size: 20px;
+
+  font-weight: 300;
+
+  transition: 0.3s ease;
+}
+
+.boton-turno:hover {
+  opacity: 0.8;
+
+  transform: translateY(-2px);
+}
+
+/* BOTÓN WHATSAPP */
+
+.boton-whatsapp {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 18px 40px;
+
+  background: black;
+
+  color: white;
+
+  border-radius: 14px;
+
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+.boton-whatsapp:hover {
+  opacity: 0.8;
+
+  transform: translateY(-2px);
+}
+
+/* BOTONES DE CARDS */
+
+.link-servicio {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  margin-top: 25px;
+
+  padding: 16px 20px;
+
+  background: black;
+
+  color: white;
+
+  border: none;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.link-servicio:hover {
+  opacity: 0.8;
+}
+
+/* RESPONSIVE GENERAL */
+
+@media (max-width: 768px) {
+
+  .boton-turno {
+    width: 100%;
+
+    font-size: 18px;
+
+    padding: 16px 20px;
+  }
+
+  .boton-whatsapp {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 16px;
+  }
+
+  .link-servicio {
+    font-size: 15px;
+  }
+
+}
