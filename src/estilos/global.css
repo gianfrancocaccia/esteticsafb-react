@@ -2,323 +2,378 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+main {
+  padding-top: 90px;
+}
+
+section {
+  width: 100%;
+}
+
+h1, h2, h3 {
+
+  letter-spacing: -1px;
+}
+
+p {
+
+  line-height: 1.8;
 }
 
 html,
 body {
-  width: 100%;
+
   overflow-x: hidden;
 }
 
-.hero {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
+.no-encontrado {
+
+  min-height: 100vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 20px;
+
+  background: white;
+}
+
+.no-encontrado h1 {
+
+  font-size: 120px;
+
+  font-weight: 600;
+}
+
+.no-encontrado p {
+
+  font-size: 24px;
+}
+
+.no-encontrado a {
+
+  padding: 14px 30px;
+
+  background: black;
+
+  color: white;
+
+  text-decoration: none;
+
+  border-radius: 14px;
+}
+
+.link-servicio {
+
   position: relative;
+
+  display: inline-block;
+
+  cursor: pointer;
+
+  font-weight: 500;
+
+  letter-spacing: 0.3px;
+
+  padding-bottom: 4px;
+
+  transition: opacity 0.3s ease;
+
 }
 
-.video-hero {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  pointer-events: none;
-  display: block;
-}
+.link-servicio::after {
 
-/* capa oscura encima del video */
-
-.hero::before {
   content: "";
 
   position: absolute;
 
-  inset: 0;
+  left: 0;
 
-  background: rgba(0, 0, 0, 0.35);
+  bottom: 0;
 
-  z-index: 1;
+  width: 100%;
+
+  height: 1px;
+
+  background: rgba(255,255,255,0.35);
+
+  transition: 0.3s ease;
+
 }
 
-/* texto encima */
+.link-servicio:hover {
 
-.overlay {
-  position: absolute;
+  opacity: 0.7;
 
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%, -50%);
-
-  z-index: 2;
-
-  text-align: center;
-
-  color: white;
-
-  width: 90%;
 }
 
-.overlay h1 {
-  font-size: 72px;
-  font-weight: 500;
+.link-servicio:hover::after {
 
-  letter-spacing: 2px;
+  height: 2px;
 
-  margin-bottom: 20px;
+  background: white;
+
 }
 
-.overlay p {
-  font-size: 22px;
+.link-servicio:active {
 
-  font-weight: 300;
+  transform: scale(0.98);
 
-  letter-spacing: 1px;
 }
 
-/* SOBRE NOSOTROS */
 
-.sobre-nosotros {
-  padding: 120px 80px;
+.whatsapp-float {
+
+  position: fixed;
+
+  right: 20px;
+
+  bottom: 20px;
+
+  width: 60px;
+
+  height: 60px;
+
+  border-radius: 50%;
+
+  z-index: 9999;
 
   display: flex;
-  flex-direction: column;
 
   align-items: center;
-
-  text-align: center;
-
-  gap: 30px;
-}
-
-.sobre-nosotros h2 {
-  font-size: 42px;
-  font-weight: 500;
-}
-
-.sobre-nosotros p {
-  max-width: 700px;
-
-  font-size: 18px;
-
-  line-height: 1.7;
-
-  color: #555555;
-}
-
-/* SERVICIOS */
-
-.servicios-inicio {
-  padding: 190px 40px;
-}
-
-.titulo-servicios {
-  font-size: 42px;
-  font-weight: 500;
-
-  text-align: center;
-
-  margin-bottom: 60px;
-}
-
-.grid-servicios {
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  width: 100%;
-
-  gap: 20px;
-}
-
-.link-tarjeta {
-  text-decoration: none;
-
-  color: inherit;
-
-  display: block;
-}
-
-.tarjeta-servicio {
-  overflow: hidden;
-
-  padding-bottom: 30px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 80px;
-
-  background: rgba(239, 238, 238, 0.457);
-
-  transition: 0.3s;
-
-  border-radius: 30px;
-
-  min-height: 520px;
-}
-
-.tarjeta-servicio:hover {
-  transform: translateY(-5px);
-}
-
-.video-servicio {
-  width: 100%;
-
-  height: 350px;
-
-  object-fit: cover;
-
-  display: block;
-
-  border-radius: 20px;
-
-  background: black;
-}
-
-.titulo-tarjeta {
-  margin-top: 60px;
-
-  color: rgb(0, 0, 0);
-
-  font-size: 24px;
-
-  font-weight: lighter;
-
-  text-align: center;
-}
-
-.texto-reserva {
-  text-align: center;
-
-  margin-top: 15px;
-
-  color: #555;
-
-  font-size: 14px;
-}
-
-.contenedor-boton-turno {
-  width: 100%;
-
-  display: flex;
 
   justify-content: center;
 
-  margin-top: 70px;
+  transition: 0.3s ease;
+
 }
 
-/* HORARIOS */
+.whatsapp-float img {
 
-.horarios {
-  padding: 120px 80px;
+  width: 100%;
 
-  background: #f3f2f2;
+  height: 100%;
 
-  display: flex;
-  flex-direction: column;
+  object-fit: contain;
 
-  align-items: center;
 }
 
-.horarios h2 {
-  font-size: 42px;
+.whatsapp-float:hover {
 
-  margin-bottom: 50px;
+  transform: scale(1.08);
+
 }
 
-.caja-horarios {
-  width: 400px;
+.whatsapp-float:active {
 
-  display: flex;
-  justify-content: space-between;
+  transform: scale(0.95);
 
-  padding: 20px 0;
-
-  border-bottom: 1px solid #dddddd;
 }
 
-/* LOCALES */
+.boton-turno {
 
-.locales {
-  padding: 120px 80px;
+  display:
+  flex;
 
-  display: grid;
+  justify-content:
+  center;
 
-  grid-template-columns: repeat(3, 1fr);
+  align-items:
+  center;
 
-  gap: 40px;
+  width:
+  fit-content;
+
+  margin:
+  70px auto 0;
+
+  text-decoration:
+  none;
+
+  color:
+  black;
+
+  font-size:
+  42px;
+
+  font-weight:
+  300;
+
+  letter-spacing:
+  1px;
+
+  position:
+  relative;
+
+  transition:
+  0.3s ease;
+
+  padding-bottom:
+  6px;
+
 }
 
-.locales div {
-  border: 1px solid #eeeeee;
+/* línea elegante */
 
-  padding: 40px;
+.boton-turno::after {
+
+  content:
+  "";
+
+  position:
+  absolute;
+
+  left:
+  0;
+
+  bottom:
+  0;
+
+  width:
+  0;
+
+  height:
+  1px;
+
+  background:
+  black;
+
+  transition:
+  width 0.4s ease;
+
 }
 
-.locales h3 {
-  font-size: 28px;
+.boton-turno:hover::after {
 
-  margin-bottom: 20px;
+  width:
+  100%;
+
 }
 
-.locales p {
-  margin-bottom: 10px;
+.boton-turno:hover {
 
-  color: #555555;
+  opacity:
+  0.6;
+
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
-  .hero {
-    height: 75vh;
+  .boton-turno {
+
+    font-size:
+    28px;
+
+    margin-top:
+    50px;
+
+    text-align:
+    center;
+
+    line-height:
+    1.2;
+
+    padding:
+    0 10px;
+
   }
 
-  .overlay h1 {
-    font-size: 38px;
-  }
+}
 
-  .overlay p {
-    font-size: 16px;
-  }
+.precio-servicio {
 
-  .sobre-nosotros {
-    padding: 80px 25px;
-  }
+  font-size: 26px;
 
-  .sobre-nosotros h2 {
-    font-size: 32px;
-  }
+  font-weight: 500;
 
-  .sobre-nosotros p {
-    font-size: 16px;
-  }
+  margin-bottom: 8px;
 
-  .servicios-inicio {
-    padding: 80px 25px;
-  }
+}
 
-  .grid-servicios {
-    grid-template-columns: 1fr;
+.texto-reserva {
 
-    gap: 30px;
-  }
+  display: block;
 
-  .video-servicio {
-    height: 320px;
-  }
+  font-size: 14px;
 
-  .horarios {
-    padding: 80px 25px;
-  }
+  font-weight: 300;
 
-  .caja-horarios {
-    width: 100%;
-  }
+  opacity: 0.7;
 
-  .locales {
-    grid-template-columns: 1fr;
+  margin-bottom: 22px;
 
-    padding: 80px 25px;
-  }
+  letter-spacing: 0.5px;
+
+}
+
+.boton-whatsapp {
+
+  margin-top: 90px;
+
+  background: black;
+
+  color: white;
+
+  text-decoration: none;
+
+  padding: 18px 42px;
+
+  border-radius: 12px;
+
+  font-size: 18px;
+
+  font-weight: 300;
+
+  transition: 0.3s ease;
+
+  display: inline-flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+}
+
+.boton-whatsapp:hover {
+
+  opacity: 0.8;
+
+  transform: translateY(-2px);
 
 }
