@@ -24,10 +24,12 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
+               preload="auto"
+               webkit-playsinline="true"
             >
 
               <source
-                src="C:\Users\Gianfranco\Desktop\esteticafb-react\esteticafb-react\public\videos\videoUno.mp4"
+                src="/videos/videoUno.mp4"
                 type="video/mp4"
               />
 
@@ -53,6 +55,8 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
+               preload="auto"
+               webkit-playsinline="true"
             >
 
               <source
@@ -82,10 +86,12 @@ function ServiciosInicio() {
               loop
               playsInline
               className="video-servicio"
+               preload="auto"
+               webkit-playsinline="true"
             >
 
               <source
-                src="C:\Users\Gianfranco\Desktop\esteticafb-react\esteticafb-react\public\videos\videoDos.mp4"
+                src="/videos/videoDos.mp4"
                 type="video/mp4"
               />
 
