@@ -48,6 +48,7 @@ function Gracias() {
           style={{
             marginTop: "90px"
           }}
+           className="boton-whatsapp"
         >
           Enviar comprobante por WhatsApp
         </a>
