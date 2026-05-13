@@ -32,7 +32,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/video.videoUno.mp4"
+                src="/video.videoOcho.mp4"
                 type="video/mp4"
               />
 
@@ -98,7 +98,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="/videos/videoDos.mp4"
+                src="/videos/videoOcho.mp4"
                 type="video/mp4"
               />
 
