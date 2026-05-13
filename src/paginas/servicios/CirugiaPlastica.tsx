@@ -38,7 +38,13 @@ function CirugiaPlastica() {
           {Object.keys(precios).map(tratamiento => (
             <article key={tratamiento}>
               <h3>{tratamiento}</h3>
-              <p>${precios[tratamiento].toLocaleString()}</p>
+             <p className="precio-servicio">
+  ${precios[tratamiento].toLocaleString()}
+</p>
+
+<span className="texto-reserva">
+  Pago correspondiente a consulta
+</span>
               <button
                 onClick={() => reservar(tratamiento, precios[tratamiento])}
                 className="link-servicio"

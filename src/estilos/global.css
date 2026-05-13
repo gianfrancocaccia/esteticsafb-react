@@ -315,3 +315,29 @@ body {
   }
 
 }
+
+.precio-servicio {
+
+  font-size: 26px;
+
+  font-weight: 500;
+
+  margin-bottom: 8px;
+
+}
+
+.texto-reserva {
+
+  display: block;
+
+  font-size: 14px;
+
+  font-weight: 300;
+
+  opacity: 0.7;
+
+  margin-bottom: 22px;
+
+  letter-spacing: 0.5px;
+
+}

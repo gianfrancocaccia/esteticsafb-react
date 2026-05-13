@@ -10,11 +10,11 @@ function BellezaFacial() {
   const [loadingTratamiento, setLoadingTratamiento] = useState<string | null>(null);
 
   const precios: Record<string, number> = {
-    "Toxina Botulinica": 60,
-    "Rellenos de Hiluronico": 60,
-    "Faciales y corporales": 50,
-    "Bioestimuladores": 80,
-    "Suero Terapia": 45
+    "Toxina Botulinica": 60000,
+    "Rellenos de Hiluronico": 60000,
+    "Faciales y corporales": 60000,
+    "Bioestimuladores": 60000,
+    "Suero Terapia": 600000
   };
 
   const reservar = (tratamiento: string, precio: number) => {
@@ -35,7 +35,13 @@ function BellezaFacial() {
           {Object.keys(precios).map(tratamiento => (
             <article key={tratamiento}>
               <h3>{tratamiento}</h3>
-              <p>${precios[tratamiento].toLocaleString()}</p>
+              <p className="precio-servicio">
+  ${precios[tratamiento].toLocaleString()}
+</p>
+
+<span className="texto-reserva">
+  Pago correspondiente a consulta
+</span>
               <button
                 onClick={() => reservar(tratamiento, precios[tratamiento])}
                 className="link-servicio"

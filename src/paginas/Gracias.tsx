@@ -1,6 +1,5 @@
 import { useLocation } from "react-router-dom";
 import Header from "../componentes/layout/Header";
-import Footer from "../componentes/layout/Footer";
 
 function Gracias() {
 
@@ -8,6 +7,7 @@ function Gracias() {
   const params = new URLSearchParams(search);
   const tratamiento = params.get("tratamiento");
   const sucursal = params.get("sucursal");
+
 
   return (
     <>
@@ -21,22 +21,23 @@ function Gracias() {
         alignItems: "center",
         gap: "20px",
         textAlign: "center",
-        padding: "20px"
+        padding: "20px",
+        marginTop: "140px"
       }}>
         <h2>Pago confirmado</h2>
         <p>Contactanos para coordinar tu turno</p>
 
-       <a
+     <a
   href={`https://wa.me/5491158837864?text=Hola,%20saqué%20turno%20en%20${encodeURIComponent(sucursal || "")}%20para%20${encodeURIComponent(tratamiento || "")}.`}
   target="_blank"
-  rel="noopener noreferrer"
-  className="boton-whatsapp"
+  rel="noreferrer"
+  style={{marginTop: "90px"}}
 >
-  Ir a WhatsApp
+  Enviar comprobante por WhatsApp
 </a>
       </main>
 
-      <Footer />
+
     </>
   );
 }
