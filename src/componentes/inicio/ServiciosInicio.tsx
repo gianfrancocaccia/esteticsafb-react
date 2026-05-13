@@ -32,7 +32,7 @@ function ServiciosInicio() {
             >
 
               <source
-                src="C:\Users\Gianfranco\Desktop\esteticafb-react\esteticafb-react\public\videos\videoUno.mp4"
+                src="/video.videoSiete.mp4"
                 type="video/mp4"
               />
 
