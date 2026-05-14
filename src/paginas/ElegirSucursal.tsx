@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Header from ".././componentes/layout/Header";
-import Footer from ".././componentes/layout/Header";
+import Footer from ".././componentes/layout/Footer";
 import "../../src/estilos/Servicio.css";
 
 function ElegirSucursal() {
   const navigate = useNavigate();
-  const { state } = useLocation(); // recibe tratamiento y price
+  const { state } = useLocation();
 
   if (!state || !state.tratamiento) {
     navigate("/servicios");
@@ -32,7 +32,7 @@ function ElegirSucursal() {
 
     try {
       const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/create_preference`,
+        "https://backend-esteticafb-production.up.railway.app/create_preference",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -45,29 +45,11 @@ function ElegirSucursal() {
       );
       const data = await res.json();
 
-      console.log(
-  "guardando tratamiento:",
-  tratamiento
-);
+      localStorage.setItem("tratamiento", tratamiento);
+      localStorage.setItem("sucursal", sucursalSeleccionada);
 
-console.log(
-  "guardando sucursal:",
-  sucursalSeleccionada
-);
+      window.location.href = `${data.init_point}?tratamiento=${encodeURIComponent(tratamiento)}&sucursal=${encodeURIComponent(sucursalSeleccionada)}`;
 
-      localStorage.setItem(
-  "tratamiento",
-  tratamiento
-);
-
-localStorage.setItem(
-  "sucursal",
-  sucursalSeleccionada
-);
-console.log(tratamiento);
-console.log(sucursalSeleccionada);
-   window.location.href =
-`${data.init_point}?tratamiento=${encodeURIComponent(tratamiento)}&sucursal=${encodeURIComponent(sucursalSeleccionada)}`;
     } catch (error) {
       console.log(error);
       alert("Error iniciando pago");
