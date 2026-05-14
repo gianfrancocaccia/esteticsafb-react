@@ -14,7 +14,7 @@ function BellezaFacial() {
     "Rellenos de Hiluronico": 60000,
     "Faciales y corporales": 60000,
     "Bioestimuladores": 60000,
-    "Suero Terapia": 600000
+    "Suero Terapia": 60000
   };
 
   const reservar = (tratamiento: string, precio: number) => {
