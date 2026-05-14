@@ -17,7 +17,7 @@ function CirugiaPlastica() {
     "Lipoescultura": 60000,
     "Abdominoplastia": 60000,
     "Implantes Mamarios": 60000,
-    "Reseccion Costal": 6000
+    "Reseccion Costal": 60000
   };
 
   const reservar = (tratamiento: string, precio: number) => {
