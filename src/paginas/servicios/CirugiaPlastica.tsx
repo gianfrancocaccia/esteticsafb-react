@@ -10,14 +10,14 @@ function CirugiaPlastica() {
   const [loadingTratamiento, setLoadingTratamiento] = useState<string | null>(null);
 
   const precios: Record<string, number> = {
-    "Rinoplastia": 250,
-    "Liposucción": 300,
-    "Mamoplastia": 280,
-    "Mela": 120,
-    "Lipoescultura": 320,
-    "Abdominoplastia": 350,
-    "Implantes Mamarios": 290,
-    "Reseccion Costal": 400
+    "Rinoplastia": 60000,
+    "Liposucción": 60000,
+    "Mamoplastia": 60000,
+    "Mela": 60000,
+    "Lipoescultura": 60000,
+    "Abdominoplastia": 60000,
+    "Implantes Mamarios": 60000,
+    "Reseccion Costal": 60000
   };
 
   const reservar = (tratamiento: string, precio: number) => {

@@ -12,12 +12,12 @@ function Odontologia() {
 
   // Lista de tratamientos y precios
   const precios: Record<string, number> = {
-    "Carillas Dentales": 80,
-    "Implantes": 80,
-    "Blanqueamiento Dental": 80,
-    "Protesis Extraibles": 60,
-    "Cirugias Maxilo Faciales": 150,
-    "Bichectomia": 650
+    "Carillas Dentales": 60000,
+    "Implantes": 60000,
+    "Blanqueamiento Dental": 60000,
+    "Protesis Extraibles": 60000,
+    "Cirugias Maxilo Faciales": 60000,
+    "Bichectomia": 60000
   };
 
   // Cuando el usuario hace click en "Reservar ahora"
