@@ -12,7 +12,7 @@ function ServiciosInicio() {
         <Link to="/cirugia-plastica">
           <article className="tarjeta-servicio">
             <video autoPlay muted loop playsInline className="video-servicio" preload="metadata">
-              <source src="/videos/videoUno.mp4" type="video/mp4" />
+              <source src="/videos/videoNuevoDos.mp4" type="video/mp4" />
             </video>
             <h3>Cirugía Plástica</h3>
           </article>
@@ -32,7 +32,7 @@ function ServiciosInicio() {
         <Link to="/odontologia">
           <article className="tarjeta-servicio">
             <video autoPlay muted loop playsInline className="video-servicio" preload="metadata">
-              <source src="/videos/videoDos.mp4" type="video/mp4" />
+              <source src="/videos/videoNuevoUno.mp4" type="video/mp4" />
             </video>
             <h3>Odontología</h3>
           </article>
