@@ -42,7 +42,7 @@ function Gracias() {
         </p>
 
         <a
-          href={`https://wa.me/5491168234440?text=Hola,%20saqué%20turno%20en%20${encodeURIComponent(sucursal || "")}%20para%20${encodeURIComponent(tratamiento || "")}.`}
+          href={`https://wa.me/491168234440?text=Hola,%20saqué%20turno%20en%20${encodeURIComponent(sucursal || "")}%20para%20${encodeURIComponent(tratamiento || "")}.`}
           target="_blank"
           rel="noreferrer"
           style={{

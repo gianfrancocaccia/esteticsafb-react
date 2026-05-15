@@ -124,7 +124,7 @@ function Footer() {
           <div className="footer-links">
 
             <a
-              href="https://wa.me/5491168234440"
+              href="https://wa.me/491168234440"
               target="_blank"
               rel="noopener noreferrer"
             >
