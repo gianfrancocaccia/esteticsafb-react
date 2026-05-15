@@ -26,7 +26,7 @@ app.use(
         return callback(null, true);
       }
 
-      // permitir origins definidos
+     
       if (allowedOrigins.includes(origin)) {
         return callback(null, true);
       }
